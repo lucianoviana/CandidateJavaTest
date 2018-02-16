@@ -1,0 +1,21 @@
+You are invited to implement a simple client for a simulated stock exchange.
+The stock exchange simulator implements the OrderBroker interface.
+You will need to:
+               a) Implement the Order interface on the MarketOrder class
+               b) Implement the OrderFactory interface (only MarketOrder)
+               c) Initialize listeners for all notifications from the simulator
+                  (please see the interface for details)
+               d) Start listening for the updates (again, please see the interface)
+               e) Once an ask price of a stock goes below $50, please post the buy order on the stock;
+                  once a bid price of a stock goes above $100, please post a sell order on the stock.
+                  IMPORTANT: a placed order may randomly fail posting,
+                  so you need to be listening for OrderPostedSuccess and OrderPostedFailed notifications from the exchange.
+               f) On the event of either post order success or failure,
+                  you need to record the order information, along with its status in the file.
+               g) After running for approx. 2 minutes, the simulator will generate an End Of Day signal,
+                  on which you need to populate the statistics of the run (number of success orders,
+                  number of failed orders, percent of failed orders, number of orders of particular side etc).
+                  IMPORTANT: it's not very critical which exact information you will return as statistics,
+                  but IT'S IMPORTANT THAT YOU LOOK AT THE PROBLEM AS A WHOLE and try to keep the memory
+                  footprint to minimum (for example, you should not need any extra containers
+                  to generated the Statistics Map on EOD)
